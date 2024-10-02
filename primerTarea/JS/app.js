@@ -1,7 +1,13 @@
-// alert('Hello World');
+alert("Hello World");
 
-function holi(texto) {
-  return alert(texto);
-}
+console.log("Holaa");
+let sumar = function (a, b) {
+  return a + b;
+};
+console.log(sumar(1, 2, 3, 4, 5));
 
-holi("Holi");
+// function holi(texto) {
+//   return alert(texto);
+// }
+
+// holi("Holi");
