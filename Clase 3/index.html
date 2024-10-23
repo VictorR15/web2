@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define el tipo de documento como HTML5 -->
+    <meta charset="UTF-8" />
+    <!-- Especifica que el contenido debe renderizarse en modo de compatibilidad con IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Define la escala inicial de la página en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Programación Web II - Modelo Formulario Básico</title>
+
+    <!-- Favicon que aparece en la pestaña del navegador -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <!-- Enlace al archivo CSS externo para el estilo de la página -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Contenido principal de la página -->
+    <main>
+      <!-- Sección del cuestionario -->
+      <section class="quiz">
+        <!-- Encabezado del cuestionario -->
+        <div class="heading">
+          <p class="title">Manipulación del DOM con JavaScript</p>
+          <p class="subtitle">Victor Manuel Ramirez Martinez</p>
+        </div>
+
+        <!-- Sección oculta que muestra el resultado -->
+        <div class="result hide">
+          <p></p>
+          <p class="reload">
+            <!-- Botón para recargar la página y reintentar -->
+            <button onclick="document.location.reload(true)">
+              ¿Reintentar?
+            </button>
+          </p>
+        </div>
+        <div class="mensaje-resultado hide">
+          <p></p>
+        </div>
+
+        <!-- Formulario del cuestionario -->
+        <form class="quiz-form">
+          <!-- Primera pregunta -->
+          <div class="question">
+            <p>1. ¿Dentro de qué elemento HTML colocamos el JavaScript?</p>
+            <div class="option">
+              <!-- Opción A seleccionada por defecto -->
+              <input type="radio" name="q1" id="" value="A" checked />
+              <label for="">js</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="" value="B" />
+              <label for="">javascript</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="" value="C" />
+              <label for="">scripting</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q1" id="" value="D" />
+              <label for="">script</label>
+            </div>
+          </div>
+
+          <!-- Segunda pregunta -->
+          <div class="question">
+            <p>
+              2. ¿Dónde es el lugar correcto para insertar un archivo
+              JavaScript?
+            </p>
+            <div class="option">
+              <input type="radio" name="q2" id="" value="A" checked />
+              <label for="">Dentro de la sección head</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="" value="B" />
+              <label for="">Al final de la sección body</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="" value="C" />
+              <label for="">Después de la sección body</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q2" id="" value="D" />
+              <label for="">Ninguna</label>
+            </div>
+          </div>
+
+          <!-- Tercera pregunta -->
+          <div class="question">
+            <p>
+              3. ¿Cuál es la sintaxis correcta para hacer referencia a un
+              archivo externo llamado "index.js"?
+            </p>
+            <div class="option">
+              <input type="radio" name="q3" id="" value="A" checked />
+              <label for="">&lt;script name="index.js"&gt;</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="" value="B" />
+              <label for="">&lt;script href="index.js"&gt;</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="" value="C" />
+              <label for="">&lt;script src="index.js"&gt;</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q3" id="" value="D" />
+              <label for="">Todas</label>
+            </div>
+          </div>
+
+          <!-- Cuarta pregunta -->
+          <div class="question">
+            <p>4. ¿Cómo se escribe "Hola Mundo" en una ventana de alerta?</p>
+            <div class="option">
+              <input type="radio" name="q4" id="" value="A" checked />
+              <label for="">pop("Hola Mundo");</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="" value="B" />
+              <label for="">alert("Hola Mundo");</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="" value="C" />
+              <label for="">popUp("Hola Mundo");</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q4" id="" value="D" />
+              <label for="">alertUp("Hola Mundo");</label>
+            </div>
+          </div>
+
+          <!-- Quinta pregunta -->
+          <div class="question">
+            <p>5. ¿Qué operador se usa para asignar un valor a una variable?</p>
+            <div class="option">
+              <input type="radio" name="q5" id="" value="A" checked />
+              <label for="">-</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="" value="B" />
+              <label for="">*</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="" value="C" />
+              <label for="">+</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="q5" id="" value="D" />
+              <label for="">=</label>
+            </div>
+          </div>
+
+          <!-- Botón para enviar el formulario -->
+          <div class="submit">
+            <input type="submit" value="Enviar" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="./index.js"></script>
+  </body>
+</html>
