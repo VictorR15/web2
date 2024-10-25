@@ -1,177 +1,177 @@
 /* Importa las fuentes desde Google Fonts (Poppins y Roboto) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&display=swap");
 /* Importa íconos de Bootstrap */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
 
 /* Define una variable CSS para la sombra de los elementos */
-:root{
-    --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+:root {
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Resetea los márgenes y el padding para todos los elementos y establece el box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif; /* Usa la fuente Poppins */
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif; /* Usa la fuente Poppins */
+  text-decoration: none;
+  list-style: none;
 }
 
 /* Estilos para la sección del cuestionario */
-.quiz{
-    background-color: #0d479a; /* Color de fondo azul */
-    padding: 30px; /* Espaciado interior */
+.quiz {
+  background-color: #0d479a; /* Color de fondo azul */
+  padding: 30px; /* Espaciado interior */
 }
 
 /* Estilos para el encabezado del cuestionario */
-.heading{
-    margin: 10px auto 40px auto; /* Márgenes superior e inferior */
+.heading {
+  margin: 10px auto 40px auto; /* Márgenes superior e inferior */
 }
 
 /* Estilo para el título principal */
-.heading .title{
-    font-size: 30px; /* Tamaño de la fuente */
-    color: #ffffff; /* Color de texto blanco */
-    font-weight: 500; /* Peso de la fuente medio */
-    text-align: center; /* Alineación centrada */
+.heading .title {
+  font-size: 30px; /* Tamaño de la fuente */
+  color: #ffffff; /* Color de texto blanco */
+  font-weight: 500; /* Peso de la fuente medio */
+  text-align: center; /* Alineación centrada */
 }
 
 /* Estilo para el subtítulo */
-.heading .subtitle{
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 300; /* Peso de fuente más ligero */
-    text-align: center;
+.heading .subtitle {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 300; /* Peso de fuente más ligero */
+  text-align: center;
 }
 
 /* Estilos para la sección de resultados */
-.result{
-    text-align: center;
-    min-width: 350px;
-    max-width: 400px; /* Ancho máximo del contenedor */
-    margin: 20px auto;
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: var(--box-shadow); /* Aplica la sombra definida */
+.result {
+  text-align: center;
+  min-width: 350px;
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: 20px auto;
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  box-shadow: var(--box-shadow); /* Aplica la sombra definida */
 }
 
 /* Primer párrafo dentro de la sección de resultados */
-.result p:first-child{
-    padding: 10px 20px;
+.result p:first-child {
+  padding: 10px 20px;
 }
 
 /* Mensaje del resultado */
-.mensaje-resultado{
-    margin-top: 2rem;
-    background-color:white;
-    padding: 1rem ;
-    text-align: center;
+.mensaje-resultado {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.mensaje-resultado p{
-    font-size: 1.5rem;
+.mensaje-resultado p {
+  font-size: 1.5rem;
 }
 
 /* Clase para ocultar elementos */
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
 
 /* Botón de recargar para intentar de nuevo */
-.reload button{
-    background-color: #04AA6D; /* Color verde */
-    color: #ffffff; /* Texto blanco */
-    padding: 10px 20px;
-    border-radius: 0px 0px 5px 5px; /* Bordes inferiores redondeados */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    border: 0px; /* Sin borde */
+.reload button {
+  background-color: #04aa6d; /* Color verde */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px;
+  border-radius: 0px 0px 5px 5px; /* Bordes inferiores redondeados */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  border: 0px; /* Sin borde */
 }
 
 /* Efecto hover para el botón de recargar */
-.reload button:hover{
-    background-color: #03a369; /* Cambia ligeramente el color al pasar el ratón */
-    cursor: pointer; /* Cambia el cursor a pointer */
+.reload button:hover {
+  background-color: #03a369; /* Cambia ligeramente el color al pasar el ratón */
+  cursor: pointer; /* Cambia el cursor a pointer */
 }
 
 /* Estilos para el formulario del cuestionario */
-.quiz-form{
-    max-width: 1000px; /* Ancho máximo del formulario */
-    margin: auto; /* Centra el formulario */
+.quiz-form {
+  max-width: 1000px; /* Ancho máximo del formulario */
+  margin: auto; /* Centra el formulario */
 }
 
 /* Estilos para cada pregunta */
-.question{
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 10px 20px; /* Espaciado interior */
-    border-radius: 5px; /* Bordes redondeados */
-    margin: 20px 0px; /* Márgenes entre preguntas */
-    box-shadow: var(--box-shadow); /* Aplica la sombra definida */
+.question {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 10px 20px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 20px 0px; /* Márgenes entre preguntas */
+  box-shadow: var(--box-shadow); /* Aplica la sombra definida */
 }
 
 /* Estilos generales para los elementos dentro de cada pregunta */
 .question > * {
-    font-size: 18px; /* Tamaño de fuente */
+  font-size: 18px; /* Tamaño de fuente */
 }
 
 /* Espaciado para las opciones de respuesta */
 .option {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 /* Estilos para las respuestas correctas */
-.correct{
-    background-color: #c8ffdf; /* Fondo verde claro */
+.correct {
+  background-color: #c8ffdf; /* Fondo verde claro */
 }
 
 /* Estilos para las respuestas incorrectas */
-.wrong{
-    background-color: #ffd1d1; /* Fondo rojo claro */
+.wrong {
+  background-color: #ffd1d1; /* Fondo rojo claro */
 }
 
 /* Agregamos unas nuevas clase a las respuestas correctas o incorrectas */
-.highlight{
-    border: 10px solid green;
+.highlight {
+  border: 10px solid green;
 }
-.wrong-highlight{
-    border: 10px solid red;
+.wrong-highlight {
+  border: 10px solid red;
 }
 
 /* Estilos para el contenedor del botón de envío */
-.submit{
-    text-align: center; /* Alineación centrada */
-    margin: 30px 0px; /* Márgenes superior e inferior */
+.submit {
+  text-align: center; /* Alineación centrada */
+  margin: 30px 0px; /* Márgenes superior e inferior */
 }
 
 /* Estilos para el botón de envío */
 .submit input {
-    background-color: #04AA6D; /* Fondo verde */
-    padding: 5px 25px; /* Espaciado interno */
-    color: #ffffff; /* Texto blanco */
-    font-size: 22px; /* Tamaño de la fuente */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: var(--box-shadow); /* Aplica la sombra definida */
-    border: 0px; /* Sin borde */
+  background-color: #04aa6d; /* Fondo verde */
+  padding: 5px 25px; /* Espaciado interno */
+  color: #ffffff; /* Texto blanco */
+  font-size: 22px; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: var(--box-shadow); /* Aplica la sombra definida */
+  border: 0px; /* Sin borde */
 }
 
 /* Cambiamos el boton depues de enviar el formulario */
-.inputEnviado input{
-    background-color: rgb(236, 240, 20);
+.inputEnviado input {
+  background-color: rgb(236, 240, 20);
 }
 
-.submit input:hover{
-    background-color: black;
-    cursor: pointer;
+.submit input:hover {
+  background-color: black;
+  cursor: pointer;
 }
 
 /* Efecto hover para el botón de envío */
-.submit input:hover{
-    background-color: #03a369; /* Cambia ligeramente el color al pasar el ratón */
-    cursor: pointer; /* Cambia el cursor a pointer */
+.submit input:hover {
+  background-color: #03a369; /* Cambia ligeramente el color al pasar el ratón */
+  cursor: pointer; /* Cambia el cursor a pointer */
 }
 
 /* Cambiamos el fondo de las preguntas */
-.cambiaBG:hover{
-    background-color: rebeccapurple;
+.cambiarBG{
+  background-color: rebeccapurple;
 }

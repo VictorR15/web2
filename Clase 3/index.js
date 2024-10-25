@@ -66,29 +66,46 @@ form.addEventListener("submit", (event) => {
   if (score <= 2) {
     parrafoMensaje.querySelector(
       "p"
-    ).textContent = `Alch ponte a estudiar pa como que ${score}`;
+    ).textContent = `Alch ponte a estudiar pa como que ${score}/5`;
   } else {
     parrafoMensaje.querySelector(
       "p"
-    ).textContent = `El que sabe sabe  ${score}`;
+    ).textContent = `El que sabe sabe  ${score}/5`;
   }
   // parrafoMensaje.querySelector("p").textContent = `Holi ${score}`;
 });
 
+/* Escondemos las preguntas */
 form.addEventListener("submit", (e) => {
   boton.classList.remove("input");
   boton.classList.add("inputEnviado");
 });
 
-//Se le agrega la clase para cambiar el fondo de pantalla al momento de pasar el mouse
-// questions.addEventListener("mousemove", (event) => {
-//   event.preventDefault();
-//   // questions.forEach((question) => {
-//   //   question.classList.add("cambiaBG");
-//   //   console.log(question);
-//   // });
+/* CAMBIAMOS EL COLOR DEL FONDO */
+// form.addEventListener("mouseover", (event) => {
+//   console.log(event);
+//   if (event.target.classList.contains("question")) {
+//     // Si se hace clic en el icono de eliminar
+//     event.target.classList.add("cambiarBG"); // Elimina la tarea
+//   }
+// });
+// /* QUITAMOS EL COLOR DEL FONDO */
+// form.addEventListener("mouseout", (event) => {
+//   console.log(event);
+//   if (event.target.classList.contains("question")) {
+//     // Si se hace clic en el icono de eliminar
+//     event.target.classList.remove("cambiarBG"); // Elimina la tarea
+//   }
 // });
 
-// // console.log(question);
-// console.log("-----------");
-// console.log(questions);
+questions.forEach((question) => {
+  // Evento cuando el mouse pasa por encima
+  question.addEventListener("mouseover", () => {
+    question.classList.add("cambiarBG"); // Agrega la clase cuando el ratón pasa por encima
+  });
+
+  // Evento cuando el mouse sale de la pregunta
+  question.addEventListener("mouseout", () => {
+    question.classList.remove("cambiarBG"); // Elimina la clase cuando el ratón se aleja
+  });
+});
