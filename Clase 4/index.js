@@ -8,6 +8,8 @@ const clearAll = document.querySelector(".clear");
 const messageSpan = document.querySelector(".message span");
 // Selecciona el formulario de búsqueda
 const searchForm = document.querySelector(".search");
+//SELECCIONAMOS EL MENSAJE DE CONFIRMACION PARA BORRAR
+const mensajeConfirmacion = document.querySelector(".message-confirmacion");
 
 // Función para actualizar el mensaje dinámico de tareas pendientes
 function updateMessage() {
@@ -23,20 +25,65 @@ addForm.addEventListener("submit", (event) => {
 
   if (value.length) {
     // Si el valor no está vacío
-    tasks.innerHTML += `<li>
-                                <span>${value}</span> <!-- Agrega la tarea a la lista -->
-                                <i class="bi bi-trash-fill delete"></i> <!-- Icono para eliminar la tarea -->
-                            </li>`;
-    addForm.reset(); // Resetea el formulario
-    updateMessage(); // Actualiza el mensaje
+    // tasks.innerHTML += `<li>
+    //                             <span>${value}</span> <!-- Agrega la tarea a la lista -->
+    //                             <i class="bi bi-trash-fill delete"></i> <!-- Icono para eliminar la tarea -->
+    //                         </li>`;
+    // addForm.reset(); // Resetea el formulario
+    // updateMessage(); // Actualiza el mensaje
+
+    //CREAMOS LOS NODOS
+    const nuevoItem = document.createElement("li");
+    const nuevoSpan = document.createElement("span");
+    const nuevoIcon = document.createElement("i");
+
+    //AGREGAMOS TEXTO
+    const nuevoSpanText = document.createTextNode(`${value}`);
+
+    //SELECCIONAMOS EL ELEMENTO PADRE
+    const ulPadre = document.querySelector(".tasks");
+    console.log(ulPadre);
+
+    //AGREGAR NODOS
+    nuevoSpan.append(nuevoSpanText);
+    nuevoItem.append(nuevoSpan, nuevoIcon);
+    ulPadre.append(nuevoItem);
+
+    //AGREGAR ATRIBUTOS
+    nuevoIcon.setAttribute("class", "bi bi-trash-fill delete");
+
+    addForm.reset();
+    updateMessage();
   }
 });
 
 // Evento para eliminar una tarea específica
 tasks.addEventListener("click", (event) => {
+  //CREAMOS LOS NODOS
+  const nuevoSpan = document.createElement("span");
+
+  //AGREGAMOS TEXTO
+  const nuevoSpanText = document.createTextNode(`Tarea eliminada`);
+
+  //SELECCIONAMOS EL ELEMENTO PADRE
+  const ulPadre = document.querySelector(".task-manager");
+  console.log(ulPadre);
+
+  //AGREGAR NODOS
+  nuevoSpan.appendChild(nuevoSpanText);
+  ulPadre.appendChild(nuevoSpan);
+
+  //AGREGAR ATRIBUTOS
+  nuevoSpan.setAttribute("class", "hide message-confirmacion message");
+
   if (event.target.classList.contains("delete")) {
     // Si se hace clic en el icono de eliminar
+
     event.target.parentElement.remove(); // Elimina la tarea
+    nuevoSpan.classList.remove("hide");
+    setTimeout(() => {
+      nuevoSpan.classList.add("hide");
+    }, 3000);
     updateMessage(); // Actualiza el mensaje
   }
 });

@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <!-- Metadatos básicos de la página -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programación Web II - Modelo de Administracion y Busqueda de Tareas</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Programación Web II - Modelo de Administracion y Busqueda de Tareas
+    </title>
 
     <!-- Enlace al favicon y al archivo CSS -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
-</head>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Contenido principal de la página -->
     <main>
-        <div class="wrap">
-            <!-- Sección de encabezado con título y subtítulo -->
-            <section class="heading">
-                <p class="title">Programación Web II</p> <!-- Título de la aplicación -->
-                <p class="subtitle">¡Administra y busca tus tareas pendientes con un clic!</p>
-            </section>
+      <div class="wrap">
+        <!-- Sección de encabezado con título y subtítulo -->
+        <section class="heading">
+          <p class="title">Programación Web II</p>
+          <!-- Título de la aplicación -->
+          <p class="subtitle">
+            ¡Administra y busca tus tareas pendientes con un clic!
+          </p>
+        </section>
 
-            <!-- Sección de administración de tareas -->
-            <section class="task-manager">
-                <!-- Caja de búsqueda de tareas -->
-                <div class="search-box">
-                    <form class="search">
-                        <!-- Campo de texto para buscar tareas -->
-                        <input type="text" name="task" placeholder="buscar tarea" autocomplete="off">
-                        <!-- Icono para resetear la búsqueda -->
-                        <i class="bi bi-x-circle reset"></i>
-                    </form>
-                </div>
+        <!-- Sección de administración de tareas -->
+        <section class="task-manager">
+          <!-- Caja de búsqueda de tareas -->
+          <div class="search-box">
+            <form class="search">
+              <!-- Campo de texto para buscar tareas -->
+              <input
+                type="text"
+                name="task"
+                placeholder="buscar tarea"
+                autocomplete="off"
+              />
+              <!-- Icono para resetear la búsqueda -->
+              <i class="bi bi-x-circle reset"></i>
+            </form>
+          </div>
 
-                <!-- Caja que contiene la lista de tareas -->
-                <div class="task-box">
-                    <ul class="tasks">
-                        <!-- Lista de tareas -->
-                        <li>
-                            <span>Grabación VD</span>
-                            <i class="bi bi-trash-fill delete"></i> <!-- Icono para eliminar la tarea -->
-                        </li>
-                        <li>
-                            <span>Edición</span>
-                            <i class="bi bi-trash-fill delete"></i>
-                        </li>
-                    </ul>
-                    <!-- Formulario para agregar nuevas tareas -->
-                    <form class="add">
-                        <input type="text" name="task" placeholder="añadir tarea" autocomplete="off">
-                        <input type="submit" value="Añadir">
-                    </form>
-                </div>
+          <!-- Caja que contiene la lista de tareas -->
+          <div class="task-box">
+            <ul class="tasks">
+              <!-- Lista de tareas -->
+              <li>
+                <span>Grabación VD</span>
+                <i class="bi bi-trash-fill delete"></i>
+                <!-- Icono para eliminar la tarea -->
+              </li>
+              <li>
+                <span>Edición</span>
+                <i class="bi bi-trash-fill delete"></i>
+              </li>
+            </ul>
+            <!-- Formulario para agregar nuevas tareas -->
+            <form class="add">
+              <input
+                type="text"
+                name="task"
+                placeholder="añadir tarea"
+                autocomplete="off"
+              />
+              <input type="submit" value="Añadir" />
+            </form>
+          </div>
 
-                <!-- Mensaje de estado y botón para eliminar todas las tareas -->
-                <div class="message">
-                    <span></span> <!-- Contenedor del mensaje dinámico -->
-                    <button class="clear">Eliminar todas</button>
-                </div>
-            </section>
-        </div>
+          <!-- MENSAJE DE CONFIRMACION DE ELIMINACION -->
+          <!-- <div class="message-confirmacion hide">
+            <span>Mensaje Eliminado</span>
+          </div> -->
+
+          <!-- Mensaje de estado y botón para eliminar todas las tareas -->
+          <div class="message">
+            <span></span>
+            <!-- Contenedor del mensaje dinámico -->
+            <span class="confirmacion"></span>
+            <button class="clear">Eliminar todas</button>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Enlace al archivo JavaScript -->
     <script src="./index.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado a español -->
+
+<head>
+    <!-- Metadatos básicos de la página -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programacion Web II - Manejo de Datos I</title> <!-- Título traducido -->
+
+    <!-- Enlace al favicon y al archivo CSS -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Contenedor principal de la página -->
+    <main>
+        <div class="outer-wrap">
+            <div class="inner-wrap">
+                <!-- Encabezado con título y subtítulo -->
+                <section class="heading">
+                    <p class="title">Transaction Plus</p> <!-- Título de la aplicación -->
+                    <p class="subtitle">¡La forma más fácil de seguir tus transacciones!</p> <!-- Subtítulo traducido -->
+                </section>
+
+                <!-- Sección de control de transacciones -->
+                <section class="transaction-control">
+                    <!-- Formulario para agregar transacciones -->
+                    <div class="actions">
+                        <h3>Agregar Transacción</h3> <!-- Título traducido -->
+                        <form class="add">
+                            <input type="text" name="source" placeholder="Fuente" autocomplete="off"> <!-- Placeholder traducido -->
+                            <input type="number" name="amount" placeholder="Monto" autocomplete="off"> <!-- Placeholder traducido -->
+                            <input type="submit" value="Agregar Transacción"> <!-- Botón traducido -->
+                        </form>
+                    </div>
+
+                    <!-- Sección de estadísticas -->
+                    <div class="stats">
+                        <h3>Estadísticas</h3> <!-- Título traducido -->
+                        <p class="balance">
+                            Balance: $<span id="balance"></span>
+                        </p>
+                        <p class="income">
+                            Ingresos: $<span id="income"></span> <!-- Texto traducido -->
+                        </p>
+                        <p class="expense">
+                            Gastos: $<span id="expense"></span> <!-- Texto traducido -->
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Sección del historial de transacciones -->
+                <section class="transaction-history">
+                    <h3>Historial de Transacciones</h3> <!-- Título traducido -->
+                    <div class="records">
+                        <div class="income">
+                            <h3>Ingresos</h3> <!-- Título traducido -->
+                            <ul class="income-list"></ul> <!-- Lista de ingresos -->
+                        </div>
+                        <div class="expense">
+                            <h3>Gastos</h3> <!-- Título traducido -->
+                            <ul class="expense-list"></ul> <!-- Lista de gastos -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
